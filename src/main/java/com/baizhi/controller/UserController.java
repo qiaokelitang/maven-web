@@ -2,10 +2,10 @@ package com.baizhi.controller;
 
 import com.baizhi.entity.User;
 import com.baizhi.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.annotation.Resource;
 
 
 /**
@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-    @Resource
+    @Autowired
     private UserService us;
     @RequestMapping("/regist")
     public String  regist(){
@@ -23,5 +23,6 @@ public class UserController {
     }
     @RequestMapping("/login")
     public void  login(){
+        System.out.println("这是分支!");
     }
 }
