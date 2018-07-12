@@ -21,4 +21,7 @@ public class UserController {
         us.addUser(new User(1,"lisi"));
         return "redirect:/index";
     }
+    @RequestMapping("/login")
+    public void  login(){
+    }
 }
